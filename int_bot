@@ -2,7 +2,7 @@ import discord
 import os
 
 # 设置环境变量
-os.environ['DISCORD_TOKEN'] = 'MTEzMTQxMjgxODU0NjEzOTI0Nw.GXZUxy.mThAAtwrKi66L829gIlQf92gT44aGL-sni38Qs'
+os.environ['DISCORD_TOKEN'] = 'MTEzMTQxMjgxODU0NjEzOTI0Nw.G3J_zo.Vsg8HqaMgOiW5DjCRv51jk0fSNIwCzfhmZqrTI'
 
 client = discord.Client(intents=discord.Intents.default())
 
