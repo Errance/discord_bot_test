@@ -1,4 +1,4 @@
-import discord
+#import discord
 
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -17,3 +17,23 @@ intents = discord.Intents.default()
 client = MyClient(intents=intents)
 
 client.run('MTEzMTQxMjgxODU0NjEzOTI0Nw.GsIaKw.n6CxGAyhU417iPv13QlYZU5PrwJVUG_axNsgcM')
+#
+
+import discord
+import os
+
+client = discord.Client()
+
+@client.event
+async def on_ready():
+    print('We have logged in as {0.user}'.format(client))
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('$hello'):
+        await message.channel.send('Hello!')
+
+client.run(os.getenv('MTEzMTQxMjgxODU0NjEzOTI0Nw.GXZUxy.mThAAtwrKi66L829gIlQf92gT44aGL-sni38Qs'))
