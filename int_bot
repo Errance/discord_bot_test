@@ -1,6 +1,9 @@
 import discord
 import os
 
+# 设置环境变量
+os.environ['DISCORD_TOKEN'] = 'MTEzMTQxMjgxODU0NjEzOTI0Nw.GXZUxy.mThAAtwrKi66L829gIlQf92gT44aGL-sni38Qs'
+
 client = discord.Client(intents=discord.Intents.default())
 
 @client.event
@@ -15,4 +18,6 @@ async def on_message(message):
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
 
-client.run(os.getenv('MTEzMTQxMjgxODU0NjEzOTI0Nw.GXZUxy.mThAAtwrKi66L829gIlQf92gT44aGL-sni38Qs'))
+# 获取环境变量的值
+token = os.getenv('DISCORD_TOKEN')
+client.run(token)
