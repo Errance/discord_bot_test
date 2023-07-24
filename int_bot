@@ -19,5 +19,8 @@ async def on_message(message):
         await message.channel.send('Hello!')
 
 # 获取环境变量的值
+# token = os.getenv('DISCORD_TOKEN')
+# client.run(token)
 token = os.getenv('DISCORD_TOKEN')
+print(token)  # 仅用于调试，不要在公开环境下这样做，以防泄露你的token
 client.run(token)
